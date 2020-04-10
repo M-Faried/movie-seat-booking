@@ -21,10 +21,10 @@ body {
 }
 
 /******************** Styling the movie selector ********************/
-.movie-container {
+.movie-list-container {
   margin: 20px 0;
 }
-.movie-container select {
+.movie-list-container select {
   color: black;
   border: 0;
   border-radius: 5px;
@@ -38,41 +38,7 @@ body {
   -webkit-appearance: none; */
 }
 
-/******************** styling seats ********************/
-.seat {
-  background-color: #444451;
-  width: 15px;
-  height: 15px;
-  margin: 3px;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
-  display: inline-block;
-}
-.seat.selected {
-  background-color: #6feaf6;
-}
-.seat.occupied {
-  background-color: white;
-}
-.seat:nth-of-type(2) {
-  margin-right: 18px;
-}
-.seat:nth-last-of-type(2) {
-  margin-left: 18px;
-}
-/* Styling seat which are not occupied */
-.seat:not(.occupied):hover {
-  cursor: pointer;
-  transform: scale(1.4);
-}
-.row {
-  display: felx;
-}
-
 /******************** styling legend ********************/
-
 /* To disable the hover effect in the showcase (legend) */
 .showcase .seat:not(.occupied):hover {
   cursor: default;
@@ -102,7 +68,7 @@ body {
 }
 
 /******************** styling screen ********************/
-.container {
+.cinema-layout-container {
   perspective: 1000px;
   margin-bottom: 20px;
 }
@@ -116,6 +82,47 @@ body {
   /* The transform is required with the perspective to give the tilting effect. */
   transform: rotateX(-45deg);
 }
+
+/******************** styling seats ********************/
+.seats-row {
+  display: block;
+}
+.seats-row:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+.seats-row:nth-last-of-type(2) {
+  margin-top: 20px;
+}
+
+.seat {
+  background-color: #444451;
+  width: 15px;
+  height: 15px;
+  margin: 3px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  display: inline-block;
+}
+.seat.selected {
+  background-color: #6feaf6;
+}
+.seat.occupied {
+  background-color: white;
+}
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+/* Styling seat which are not occupied */
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.4);
+}
+
 /******************** styling summary ********************/
 p {
   margin: 5px 0;
