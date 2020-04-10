@@ -130,3 +130,24 @@ p {
 p span {
   color: #6feaf6;
 }
+
+/* Mobile View */
+@media (max-width: 400px) {
+  .movie-list-container {
+    margin: 0;
+    align-items: center;
+  }
+  .movie-list-container label {
+    display: block;
+    margin: 0 0 5px 0;
+    width: 100%;
+  }
+  .movie-list-container select {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .screen {
+    margin: 0 0 5px 0;
+  }
+}
